@@ -1,16 +1,20 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "josefin-sans";
+  src: url(./assets/fonts/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "josefin-sans-bold";
+  src: url(./assets/fonts/JosefinSans-Bold.ttf);
+}
 
 html {
-  font-family: sans-serif;
-  background: #fff;
+  font-family: "josefin-sans", sans-serif;
 }
 
 body {
   margin: 0;
-}
-
-main {
-  margin-top: 6rem;
 }
