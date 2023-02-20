@@ -1,0 +1,9 @@
+.itemsDiv {
+  position: relative;
+  top: 24px;
+}
+
+.todoDiv {
+  position: absolute;
+  width: 100%;
+}

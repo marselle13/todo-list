@@ -1,0 +1,61 @@
+.todoInfo {
+  width: 100%;
+  display: flex;
+  padding: 20px 24px;
+}
+
+.todoInfo .items {
+  width: 40%;
+}
+
+.todoInfo h5 {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.2px;
+  color: #9495a5;
+  margin: 0;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+}
+.nav li {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.2px;
+  color: #9495a5;
+}
+.nav li:hover {
+  color: #494c6b;
+}
+
+.nav button {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.2;
+  background: transparent;
+  border: none;
+  align-self: flex-start;
+  font-family: "josefin-sans", sans-serif;
+  cursor: pointer;
+  color: #9495a5;
+}
+
+.selected {
+  color: #3a7cfd !important;
+}
+
+.nav button:hover {
+  color: #494c6b;
+}

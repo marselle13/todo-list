@@ -1,0 +1,22 @@
+.checkbox input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #e3e4f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox input.checked {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+  position: relative;
+}
+
+.checkbox input.checked::before {
+  content: url(../../assets/Path.svg);
+}

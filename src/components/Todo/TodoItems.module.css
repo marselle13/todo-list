@@ -1,0 +1,29 @@
+.itemsList {
+}
+
+.itemsList ul {
+  margin: 0;
+  padding: 0;
+}
+
+.itemsList li {
+  margin: 0;
+  padding: 8px 24px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e3e4f1;
+}
+
+.itemLabel {
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #494c6b;
+  word-break: break-word;
+}
+
+.doneTodo {
+  text-decoration: line-through;
+  color: #d1d2da !important;
+}
