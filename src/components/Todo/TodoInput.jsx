@@ -39,7 +39,7 @@ const TodoInput = () => {
           <input
             type="text"
             placeholder="Create a new todo..."
-            className={`${classes.todoInput} ${theme && classes.darkInput}`}
+            className={`${classes.todoInput} ${theme ? classes.darkInput : ""}`}
             onChange={inputHandler}
             value={todo}
           />

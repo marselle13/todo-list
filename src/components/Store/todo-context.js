@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const TodoContext = React.createContext({
   theme: false,
@@ -15,6 +15,8 @@ export const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState([]);
   const [activeButton, setActiveButton] = useState("all");
   const [theme, setTheme] = useState(false);
+  const dragItem = useRef();
+  const dragOverItem = useRef();
 
   const themeHandler = () => {
     setTheme((prev) => !prev);
@@ -46,6 +48,24 @@ export const TodoContextProvider = (props) => {
     setTodos(filterTodos);
   };
 
+  const dragStart = ( position) => {
+    dragItem.current = position;
+  };
+
+  const dragEnter = (position) => {
+    dragOverItem.current = position;
+  };
+
+  const drop = () => {
+    const copyListItems = [...todos];
+    const dragItemContent = copyListItems[dragItem.current];
+    copyListItems.splice(dragItem.current, 1);
+    copyListItems.splice(dragOverItem.current, 0, dragItemContent);
+    dragItem.current = null;
+    dragOverItem.current = null;
+    setTodos(copyListItems);
+  };
+
   const filterTodos = todos.filter((todo) => {
     let filterArr = [];
     if (activeButton === "all") {
@@ -69,6 +89,9 @@ export const TodoContextProvider = (props) => {
     themeHandler,
     addTodo: addTodoHandler,
     removeTodo: removeTodoHandler,
+    dragStart,
+    dragEnter,
+    drop,
   };
 
   return (

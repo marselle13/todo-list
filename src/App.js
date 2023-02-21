@@ -4,7 +4,6 @@ import TodoContext from "./components/Store/todo-context";
 import TodoInput from "./components/Todo/TodoInput";
 import TodoList from "./components/Todo/TodoList";
 import classes from "./App.module.css";
-import TodoInfo from "./components/Todo/TodoInfo";
 
 function App() {
   const { theme } = useContext(TodoContext);
