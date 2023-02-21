@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import TodoContext from "../Store/todo-context";
 import classes from "./TodoInfo.module.css";
+import TodoNav from "./TodoNav";
 
 const TodoInfo = () => {
-  const { filterTodos, removeTodo, activeButton, selectHandler, theme } =
-    useContext(TodoContext);
+  const { filterTodos, removeTodo, theme } = useContext(TodoContext);
 
   return (
     <div className={classes.todoInfo}>
@@ -14,33 +14,7 @@ const TodoInfo = () => {
         </h5>
       </div>
       <div className={classes.nav}>
-        <ul>
-          <li
-            className={`${activeButton === "all" ? classes.selected : ""} ${
-              theme ? classes.darkNav : classes.lightNav
-            }`}
-            onClick={() => selectHandler("all")}
-          >
-            All
-          </li>
-          <li
-            className={`${activeButton === "active" ? classes.selected : ""} ${
-              theme ? classes.darkNav : classes.lightNav
-            }`}
-            onClick={() => selectHandler("active")}
-          >
-            Active
-          </li>
-          <li
-            className={`${
-              activeButton === "completed" ? classes.selected : ""
-            } ${theme ? classes.darkNav : classes.lightNav}`}
-            onClick={() => selectHandler("completed")}
-          >
-            Completed
-          </li>
-        </ul>
-
+        <TodoNav />
         <button onClick={removeTodo} className={theme && classes.darkClear}>
           Clear Completed
         </button>

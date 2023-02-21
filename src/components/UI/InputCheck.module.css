@@ -22,7 +22,7 @@
 }
 
 .checkbox input.checked::before {
-  content: url(../../assets/Path.svg);
+  content: url(../../assets/icon-check.svg);
 }
 
 .darkCheck {

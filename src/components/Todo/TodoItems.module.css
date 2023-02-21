@@ -60,3 +60,25 @@ li:hover .itemClose {
   text-decoration: line-through;
   color: #d1d2da !important;
 }
+
+@media (max-width: 600px) {
+  li .itemClose {
+    background-image: url(../../assets/icon-cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .itemLabel {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

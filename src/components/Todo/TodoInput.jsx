@@ -29,7 +29,6 @@ const TodoInput = () => {
 
     addTodo(todoList);
     setTodo("");
-    setIsChecked(false);
   };
 
   return (

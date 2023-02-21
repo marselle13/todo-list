@@ -1,0 +1,11 @@
+.selected {
+  color: #3a7cfd !important;
+}
+
+.lightNav:hover {
+  color: #494c6b;
+}
+
+.darkNav:hover {
+  color: #fff;
+}

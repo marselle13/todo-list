@@ -7,3 +7,32 @@
   position: absolute;
   width: 100%;
 }
+
+.navMob {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navMob {
+    display: flex;
+
+    justify-content: center;
+    width: 90%;
+    padding: 20px 0;
+  }
+
+  .navMob ul {
+    list-style-type: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+  }
+  .navMob li {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.2px;
+    color: #9495a5;
+  }
+}
