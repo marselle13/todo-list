@@ -6,7 +6,8 @@ const TodoContext = React.createContext({
   addTodo: (todo) => {},
   removeTodo: () => {},
   selectHandler: (select) => {},
-  listHandler: (index) => {},
+  closeHandler: (id) => {},
+  listHandler: (id) => {},
   themeHandler: () => {},
 });
 
@@ -39,6 +40,12 @@ export const TodoContextProvider = (props) => {
     setTodos(updateTodos);
   };
 
+  const closeHandler = (id) => {
+    const updateTodos = [...todos];
+    const filterTodos = updateTodos.filter((todo) => todo.id !== id);
+    setTodos(filterTodos);
+  };
+
   const filterTodos = todos.filter((todo) => {
     let filterArr = [];
     if (activeButton === "all") {
@@ -58,6 +65,7 @@ export const TodoContextProvider = (props) => {
     activeButton,
     listHandler,
     selectHandler,
+    closeHandler,
     themeHandler,
     addTodo: addTodoHandler,
     removeTodo: removeTodoHandler,

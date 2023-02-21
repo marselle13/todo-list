@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.checkbox input:hover {
+  outline: 1px solid #c058f3;
+}
+
 .checkbox input.checked {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   position: relative;

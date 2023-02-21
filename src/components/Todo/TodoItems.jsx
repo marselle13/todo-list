@@ -1,11 +1,11 @@
 import { useContext } from "react";
-
 import TodoContext from "../Store/todo-context";
 import InputCheck from "../UI/InputCheck";
 import classes from "./TodoItems.module.css";
 
 const TodoItems = () => {
-  const { filterTodos, listHandler, theme } = useContext(TodoContext);
+  const { filterTodos, listHandler, theme, closeHandler } =
+    useContext(TodoContext);
 
   return (
     <div className={classes.itemsList}>
@@ -21,13 +21,22 @@ const TodoItems = () => {
               onClick={() => listHandler(todo.id)}
               check={todo.isChecked}
             />
-            <p
-              className={`${classes.itemLabel} ${
-                todo.isChecked && classes.doneTodo
-              } ${theme && classes.darkItemLabel}`}
-            >
-              {todo.todo}
-            </p>
+            <div className={classes.labelDiv}>
+              <p
+                className={`${classes.itemLabel} ${
+                  todo.isChecked && classes.doneTodo
+                } ${theme && classes.darkItemLabel}`}
+              >
+                {todo.todo}
+              </p>
+
+              <button
+                onClick={() => closeHandler(todo.id)}
+                className={classes.itemClose}
+              >
+                {" "}
+              </button>
+            </div>
           </li>
         ))}
       </ul>
