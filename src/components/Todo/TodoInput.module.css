@@ -22,6 +22,11 @@
   caret-color: #3a7cfd;
 }
 
+.darkInput {
+  background: #25273d;
+  color: #c8cbe7;
+}
+
 .todoInput::placeholder {
   font-family: "josefin-sans", sans-serif;
   font-weight: 400;
@@ -29,4 +34,8 @@
   line-height: 18px;
   letter-spacing: -0.25px;
   color: #9495a5;
+}
+
+.darkInput::placeholder {
+  color: #767992;
 }

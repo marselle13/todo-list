@@ -12,12 +12,20 @@
   border-bottom: 1px solid #e3e4f1;
 }
 
+.darkList {
+  border-bottom: 1px solid #393a4b !important;
+}
+
 .itemLabel {
   font-size: 18px;
   line-height: 18px;
   letter-spacing: -0.25px;
   color: #494c6b;
   word-break: break-word;
+}
+
+.darkItemLabel {
+  color: #c8cbe7;
 }
 
 .doneTodo {

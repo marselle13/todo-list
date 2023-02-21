@@ -7,7 +7,7 @@ import classes from "./TodoInput.module.css";
 const TodoInput = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [todo, setTodo] = useState("");
-  const { addTodo } = useContext(TodoContext);
+  const { addTodo, theme } = useContext(TodoContext);
 
   const toggleCheckbox = () => {
     setIsChecked((prev) => !prev);
@@ -40,7 +40,7 @@ const TodoInput = () => {
           <input
             type="text"
             placeholder="Create a new todo..."
-            className={classes.todoInput}
+            className={`${classes.todoInput} ${theme && classes.darkInput}`}
             onChange={inputHandler}
             value={todo}
           />

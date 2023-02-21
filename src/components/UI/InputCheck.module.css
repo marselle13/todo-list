@@ -20,3 +20,7 @@
 .checkbox input.checked::before {
   content: url(../../assets/Path.svg);
 }
+
+.darkCheck {
+  border: 1px solid #393a4b !important;
+}

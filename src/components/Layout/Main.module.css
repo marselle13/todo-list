@@ -18,3 +18,9 @@
   letter-spacing: 15px;
   color: #fff;
 }
+
+.nav button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

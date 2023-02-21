@@ -15,10 +15,4 @@ html {
   font-family: "josefin-sans", sans-serif;
 }
 
-body {
-  background: url(./assets/bg-desktop-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0px;
-  padding: 0px;
-}
+

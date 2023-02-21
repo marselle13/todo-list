@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+.darkCount {
+  color: #5b5e7e !important;
+}
+
 .nav {
   width: 100%;
   display: flex;
@@ -36,8 +40,16 @@
   letter-spacing: -0.2px;
   color: #9495a5;
 }
-.nav li:hover {
+.selected {
+  color: #3a7cfd !important;
+}
+
+.lightNav:hover {
   color: #494c6b;
+}
+
+.darkNav:hover {
+  color: #fff;
 }
 
 .nav button {
@@ -52,10 +64,14 @@
   color: #9495a5;
 }
 
-.selected {
-  color: #3a7cfd !important;
-}
-
 .nav button:hover {
   color: #494c6b;
+}
+
+.nav .darkClear {
+  color: #5b5e7e;
+}
+
+.nav .darkClear:hover {
+  color: #e3e4f1;
 }

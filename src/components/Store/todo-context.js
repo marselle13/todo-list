@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 
 const TodoContext = React.createContext({
+  theme: false,
   filterTodos: [],
   addTodo: (todo) => {},
   removeTodo: () => {},
   selectHandler: (select) => {},
   listHandler: (index) => {},
+  themeHandler: () => {},
 });
 
 export const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState([]);
   const [activeButton, setActiveButton] = useState("all");
+  const [theme, setTheme] = useState(false);
+
+  const themeHandler = () => {
+    setTheme((prev) => !prev);
+  };
 
   const selectHandler = (select) => {
     setActiveButton(select);
@@ -46,10 +53,12 @@ export const TodoContextProvider = (props) => {
   });
 
   const todoContext = {
+    theme,
     filterTodos,
     activeButton,
     listHandler,
     selectHandler,
+    themeHandler,
     addTodo: addTodoHandler,
     removeTodo: removeTodoHandler,
   };

@@ -5,13 +5,18 @@ import InputCheck from "../UI/InputCheck";
 import classes from "./TodoItems.module.css";
 
 const TodoItems = () => {
-  const { filterTodos, listHandler } = useContext(TodoContext);
+  const { filterTodos, listHandler, theme } = useContext(TodoContext);
 
   return (
     <div className={classes.itemsList}>
       <ul>
-        {filterTodos.map((todo, index) => (
-          <li key={todo.id} onDragStart={(e) => console.log(e)} draggable>
+        {filterTodos.map((todo) => (
+          <li
+            key={todo.id}
+            onDragStart={(e) => console.log(e)}
+            className={theme && classes.darkList}
+            draggable
+          >
             <InputCheck
               onClick={() => listHandler(todo.id)}
               check={todo.isChecked}
@@ -19,7 +24,7 @@ const TodoItems = () => {
             <p
               className={`${classes.itemLabel} ${
                 todo.isChecked && classes.doneTodo
-              }`}
+              } ${theme && classes.darkItemLabel}`}
             >
               {todo.todo}
             </p>
