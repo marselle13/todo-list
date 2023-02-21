@@ -1,15 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import TodoContext from "../Store/todo-context";
 import classes from "./TodoInfo.module.css";
 
 const TodoInfo = () => {
-  const { todos, removeTodo, activeButton, selectHandler } =
+  const { filterTodos, removeTodo, activeButton, selectHandler } =
     useContext(TodoContext);
 
   return (
     <div className={classes.todoInfo}>
       <div className={classes.items}>
-        <h5>{todos.length} items left</h5>
+        <h5>{filterTodos.length} items left</h5>
       </div>
       <div className={classes.nav}>
         <ul>

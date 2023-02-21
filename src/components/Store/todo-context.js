@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 const TodoContext = React.createContext({
-  todos: [],
+  filterTodos: [],
   addTodo: (todo) => {},
   removeTodo: () => {},
   selectHandler: (select) => {},
+  listHandler: (index) => {},
 });
 
 export const TodoContextProvider = (props) => {
@@ -24,9 +25,30 @@ export const TodoContextProvider = (props) => {
     setTodos(undoneTodo);
   };
 
+  const listHandler = (id) => {
+    const updateTodos = [...todos];
+    const focusTodo = updateTodos.find((todo) => todo.id === id);
+    focusTodo.isChecked = !focusTodo.isChecked;
+    setTodos(updateTodos);
+  };
+
+  const filterTodos = todos.filter((todo) => {
+    let filterArr = [];
+    if (activeButton === "all") {
+      filterArr = todo;
+    } else if (activeButton === "active") {
+      filterArr = todo.isChecked === false;
+    } else if (activeButton === "completed") {
+      filterArr = todo.isChecked === true;
+    }
+
+    return filterArr;
+  });
+
   const todoContext = {
-    todos,
+    filterTodos,
     activeButton,
+    listHandler,
     selectHandler,
     addTodo: addTodoHandler,
     removeTodo: removeTodoHandler,
