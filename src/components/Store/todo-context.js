@@ -13,9 +13,8 @@ const TodoContext = React.createContext({
 
 export const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState([]);
-
   const [activeButton, setActiveButton] = useState("all");
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || false);
   const dragItem = useRef();
   const dragOverItem = useRef();
 
@@ -28,7 +27,8 @@ export const TodoContextProvider = (props) => {
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+    localStorage.setItem("theme", theme);
+  }, [todos, theme]);
 
   const themeHandler = () => {
     setTheme((prev) => !prev);
