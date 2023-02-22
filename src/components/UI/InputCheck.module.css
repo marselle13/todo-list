@@ -12,11 +12,6 @@
   align-items: center;
 }
 
-.checkbox input:hover {
-  border-radius: 50%;
-  outline: 1px solid #c058f3;
-}
-
 .checkbox input.checked {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   position: relative;
@@ -28,4 +23,10 @@
 
 .darkCheck {
   border: 1px solid #393a4b !important;
+}
+
+@media (min-width: 600px) {
+  .checkbox input:hover {
+    outline: 1px solid #c058f3;
+  }
 }
