@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const TodoContext = React.createContext({
   theme: false,
@@ -13,10 +13,22 @@ const TodoContext = React.createContext({
 
 export const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState([]);
+
   const [activeButton, setActiveButton] = useState("all");
   const [theme, setTheme] = useState(false);
   const dragItem = useRef();
   const dragOverItem = useRef();
+
+  useEffect(() => {
+    const checkTodos = JSON.parse(localStorage.getItem("todos"));
+    if (checkTodos) {
+      setTodos(checkTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const themeHandler = () => {
     setTheme((prev) => !prev);
@@ -48,7 +60,7 @@ export const TodoContextProvider = (props) => {
     setTodos(filterTodos);
   };
 
-  const dragStart = ( position) => {
+  const dragStart = (position) => {
     dragItem.current = position;
   };
 
