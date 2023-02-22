@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/todo-list/static/css/main.27bc9a32.css",
-    "main.js": "/todo-list/static/js/main.b6a8d4ba.js",
+    "main.js": "/todo-list/static/js/main.a0bcae5c.js",
     "static/media/JosefinSans-Regular.ttf": "/todo-list/static/media/JosefinSans-Regular.0e82e3d2c82cf1e38a33.ttf",
     "static/media/JosefinSans-Bold.ttf": "/todo-list/static/media/JosefinSans-Bold.a3a7c833253b917d3b74.ttf",
     "static/media/bg-desktop-light.jpg": "/todo-list/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
@@ -12,10 +12,10 @@
     "static/media/icon-cross.svg": "/todo-list/static/media/icon-cross.6ee81d30b75cab19d6f7.svg",
     "static/media/icon-check.svg": "/todo-list/static/media/icon-check.a8fb15d0278c8e312df5.svg",
     "main.27bc9a32.css.map": "/todo-list/static/css/main.27bc9a32.css.map",
-    "main.b6a8d4ba.js.map": "/todo-list/static/js/main.b6a8d4ba.js.map"
+    "main.a0bcae5c.js.map": "/todo-list/static/js/main.a0bcae5c.js.map"
   },
   "entrypoints": [
     "static/css/main.27bc9a32.css",
-    "static/js/main.b6a8d4ba.js"
+    "static/js/main.a0bcae5c.js"
   ]
 }
